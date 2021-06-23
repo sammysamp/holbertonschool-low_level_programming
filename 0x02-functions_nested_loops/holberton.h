@@ -1,2 +1,2 @@
-int _putchar(char *message);
+int _putchar(char * message);
 
