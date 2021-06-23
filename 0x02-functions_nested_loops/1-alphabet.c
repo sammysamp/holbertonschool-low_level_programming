@@ -5,7 +5,7 @@ void print_alphabet(void)
 
 	while (c <= 'z')
 	{
-		printf("%s", c);
+		printf("%c", c);
 		c++;
 	}
 }
