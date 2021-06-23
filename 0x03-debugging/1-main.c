@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/**
+/*
  * main - test comment while
  * Return: 0
  */
