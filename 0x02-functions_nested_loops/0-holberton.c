@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	_putchar("Holberton");
+	_putchar("Holberton\n");
 	return (0);
 
 }
