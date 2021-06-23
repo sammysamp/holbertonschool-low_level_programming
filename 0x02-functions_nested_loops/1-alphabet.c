@@ -8,6 +8,7 @@ void print_alphabet(void)
 		printf("%c", c);
 		c++;
 	}
+	printf("\n");
 }
 
 
