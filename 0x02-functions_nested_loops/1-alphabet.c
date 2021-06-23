@@ -1,9 +1,9 @@
 #include <stdio.h>
 void print_alphabet(void)
 {
-	char c = 97;
+	char c = 'a';
 
-	while (c < 123)
+	while (c <= 'z')
 	{
 		printf("%s", c);
 		c++;
