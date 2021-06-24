@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - test positive or negative
+ * main - test comment while
  * Return: 0
  */
 int main(void)
