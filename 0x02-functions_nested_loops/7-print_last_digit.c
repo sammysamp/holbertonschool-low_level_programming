@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "holberton.h"
+#include <stdlib.h>
 /**
  * print_last_digit - return the last digit of a given number
  * @c: integer to check
@@ -11,7 +12,7 @@ int print_last_digit(int c)
 {
 	int d;
 
-	d = _abs(c) % 10;
+	d = abs(c) % 10;
 	_putchar('0' + d);
 	return (d);
 }
