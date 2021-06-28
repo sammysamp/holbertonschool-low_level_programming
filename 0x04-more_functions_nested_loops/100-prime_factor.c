@@ -5,7 +5,7 @@
  * @i: second number
  * Return: 1 if is success
  */
-int _esdivisible(int num, int i)
+int _esdivisible(long int num, long int i)
 {
 	if (num % i == 0)
 	{
@@ -22,9 +22,9 @@ int _esdivisible(int num, int i)
  * @i: number to check
  * Return: 1 if is success
  */
-int _esprimo(int i)
+int _esprimo(long int i)
 {
-	int cont;
+	long int cont;
 
 	for (cont = 2; cont < i; cont++)
 	{
@@ -39,11 +39,11 @@ int _esprimo(int i)
  *
  * Return: nothing
  */
-void main(void)
+int main(void)
 {
-	int num = 612852475143;
-	int i, esdivisible, esprimo;
-	int higher = 1;
+	long int num = 612852475143;
+	long int i, esdivisible, esprimo;
+	long int higher = 1;
 
 	for (i = 2; i < num; i++)
 	{
@@ -52,5 +52,6 @@ void main(void)
 		if (esdivisible && esprimo)
 			higher = i;
 	}
-	printf("%d\n", higher);
+	printf("%ld\n", higher);
+	return (1);
 }
