@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * _strlen - return the lenth of the string
- * @s: pointer of tne string
+ * _puts - print string char by char
+ * @str: pointer of tne string
  *
- * Return: the lengh in integer
+ * Return: nothing
  */
 void _puts(char *str)
 {
