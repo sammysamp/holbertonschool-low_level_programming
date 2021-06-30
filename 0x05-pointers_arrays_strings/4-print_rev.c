@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "holberton.h"
 
 /**
  * print_rev - print string in reverse
@@ -20,7 +21,7 @@ void print_rev(char *s)
 	s = s - len;
 	for (i = len; i >= 0; i--)
 	{
-		printf("%c", *(s + i));
+		_putchar(*(s + i));
 	}
-	printf("\n");
+	_putchar('\n');
 }
