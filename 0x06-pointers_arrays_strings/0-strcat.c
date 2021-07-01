@@ -15,12 +15,12 @@ char *_strcat(char *dest, char *src)
 
 	is = 0;
 	id = 0;
-	while (src[is] != 0)
+	while (src[is] != '\0')
 	{
 		is++;
 	}
 
-	while (dest[id] != 0)
+	while (dest[id] != '\0')
 	{
 		id++;
 	}
