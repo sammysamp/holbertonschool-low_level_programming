@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stddef.h>
 /**
  * _strpbrk - check ocurrences of chars from accept in s
  * @s: string where to look for
@@ -28,7 +28,14 @@ char *_strpbrk(char *s, char *accept)
 			break;
 		}
 	}
-	return (s);
+	if (*s == '\0')
+	{
+		return NULL;
+	}	
+	else
+	{
+		return (s);
+	}	
 }
 
 
