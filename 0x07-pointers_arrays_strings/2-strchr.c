@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stddef.h>
 /**
  * _strchr - find char on a string
  * @s: string where to look for
@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 			s++;
 		}
 	}
-	return ('\0');
+	return (NULL);
 }
 
 
