@@ -30,12 +30,12 @@ char *_strpbrk(char *s, char *accept)
 	}
 	if (*s == '\0')
 	{
-		return NULL;
-	}	
+		return (NULL);
+	}
 	else
 	{
 		return (s);
-	}	
+	}
 }
 
 
