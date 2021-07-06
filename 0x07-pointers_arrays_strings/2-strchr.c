@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 			s++;
 		}
 	}
-	return ("Hola");
+	return ('\0');
 }
 
 
