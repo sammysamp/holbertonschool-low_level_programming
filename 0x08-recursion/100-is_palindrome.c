@@ -7,10 +7,10 @@
  */
 int strl(char *s)
 {
-	if !(*s)
+	if (!(*s))
 		return (0);
 	s++;
-	return (1 + str(s));
+	return (1 + strl(s));
 }
 
 /**
