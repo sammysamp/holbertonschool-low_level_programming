@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - print the name of the program
+ * @argc: int length of array argv
+ * @argv: array or element of a list
+ *
+ * Return: nothing
+ */
+int main(int argc, char **argv)
+{
+	int i;
+
+	i = 1;
+	if (argc < 0)
+		exit(EXIT_FAILURE);
+	while (i < argc)
+	{
+		printf("%s\n", argv[i++]);
+	}
+	exit(EXIT_SUCCESS);
+}
