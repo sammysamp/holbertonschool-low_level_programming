@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	int i;
 
 	i = 1;
-	if (argc < 0)
+	if (!argc)
 		exit(EXIT_FAILURE);
 	while (i < argc)
 	{
