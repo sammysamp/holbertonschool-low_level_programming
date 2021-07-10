@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
 	int i;
 
-	i = 1;
+	i = 0;
 	if (!argc)
 		exit(EXIT_FAILURE);
 	while (i < argc)
