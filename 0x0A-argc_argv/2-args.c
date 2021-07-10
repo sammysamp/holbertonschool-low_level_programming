@@ -16,7 +16,8 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	while (i < argc)
 	{
-		printf("%s\n", argv[i++]);
+		printf("%s\n", argv[i]);
+		i++;
 	}
 	exit(EXIT_SUCCESS);
 }
