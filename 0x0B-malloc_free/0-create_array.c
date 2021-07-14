@@ -13,6 +13,7 @@ char *create_array(unsigned int size, char c)
 {
 	char *ar;
 	unsigned int i;
+	char *s;
 
 	if (size == 0)
 		return (0);
@@ -23,7 +24,8 @@ char *create_array(unsigned int size, char c)
 		ar[i] = c;
 		i++;
 	}
-	if (ar == NULL)
+	s = malloc(INT_MAX);
+	if (s == NULL)
 		return (NULL);
 	else
 		return (ar);
