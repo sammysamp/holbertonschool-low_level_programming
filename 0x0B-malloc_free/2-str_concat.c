@@ -18,12 +18,16 @@ char *str_concat(char *s1, char *s2)
 
 	j = 0;
 	k = 0;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	while (s1[j])
 		j++;
 	while (s2[k])
 		k++;
 	i = 0;
-	ar = malloc(sizeof(*ar) * (j + 1 + k + 1));
+	ar = malloc(sizeof(*ar) * (j + k + 1));
 	if (ar == NULL)
 		return (NULL);
 	while (i < j)
