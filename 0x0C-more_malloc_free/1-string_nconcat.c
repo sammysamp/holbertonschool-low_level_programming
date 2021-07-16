@@ -29,11 +29,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (k > n)
 	{
 		k = n;
-		ar = malloc(sizeof(*ar) * (j + k + 1));
+		ar = malloc(sizeof(*ar) * (j + k + 2));
 	}
 	else
 	{
-		ar = malloc(sizeof(*ar) * (j + k));
+		ar = malloc(sizeof(*ar) * (j + k + 1));
 	}
 	if (ar == NULL)
 		return (NULL);
