@@ -29,11 +29,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (k > n)
 	{
 		k = n;
-		ar = malloc(sizeof(*ar) * (j + k + 2));
+		ar = malloc(sizeof(*ar) * (j + k + 1));
 	}
 	else
 	{
-		ar = malloc(sizeof(*ar) * (j + k + 1));
+		ar = malloc(sizeof(*ar) * (j + k));
 	}
 	if (ar == NULL)
 		return (NULL);
@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ar[i] = s1[i];
 		i++;
 	}
-	while (i <= j + k)
+	while (i < j + k)
 	{
 		ar[i] = s2[i - j];
 		i++;
