@@ -29,25 +29,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (k > n)
 	{
 		k = n;
-		ar = malloc(sizeof(*ar) * (j + k + 1));
+		ar = malloc(sizeof(char) * (j + k + 1));
 	}
-	else
-	{
-		ar = malloc(sizeof(*ar) * (j + k));
-	}
+	ar = malloc(sizeof(char) * (j + k + 1));
+	printf("j = %d\n", j);
+	printf("k = %d\n", k);
+	printf("ar = %p\n", ar);
+	printf("ar = %d\n", *ar);
 	if (ar == NULL)
 		return (NULL);
 	while (i < j)
 	{
-		ar[i] = s1[i];
+		ar[i] = *(s1 + i);
 		i++;
 	}
 	while (i < j + k)
 	{
-		ar[i] = s2[i - j];
+		ar[i] = *(s2 + i - j);
 		i++;
 	}
-	if (ar[j + k] != '\0')
-		ar[j + k + 1] = '\0';
+	printf("ar = %s\n", ar);
 	return (ar);
 }
