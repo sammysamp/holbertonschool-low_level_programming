@@ -30,7 +30,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-	for (j = 0; j < i; j++)
+	for (j = 0; j <= i; j++)
 		bname[j] = name[j];
 	k = 0;
 	bowner = malloc(sizeof(char) * k + 1);
@@ -41,7 +41,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-	for (m = 0; m < k; m++)
+	for (m = 0; m <= k; m++)
 		bowner[m] = owner[m];
 	if (d == NULL)
 	{
