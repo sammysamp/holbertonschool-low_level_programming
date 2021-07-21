@@ -23,7 +23,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	i = 0;
 	while (name[i])
 		i++;
-	bname = malloc(sizeof(char) * i);
+	bname = malloc(sizeof(char) * i + 1);
 	if (bname == NULL)
 	{
 		free(bname);
@@ -33,7 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (j = 0; j < i; j++)
 		bname[j] = name[j];
 	k = 0;
-	bowner = malloc(sizeof(char) * k);
+	bowner = malloc(sizeof(char) * k + 1);
 	if (bowner == NULL)
 	{
 		free(bname);
