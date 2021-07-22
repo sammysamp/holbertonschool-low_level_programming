@@ -3,20 +3,21 @@
 #include "function_pointers.h"
 
 /**
- * print_name - prints a name as is
- * @name: name of the person
- * @f: function pointer
+ * array_iterator - execute in every element of array
+ * @array: given array
+ * @size: size of array
+ * @action: function pointer
  * Return: Nothing.
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	char *mname;
-	int i;
+	unsigned int i;
 
 	mname = malloc(sizeof(action));
 	if (mname == NULL)
 		return;
-	for (i = 0; i < n; i++)
+	for (i = 0; i < size; i++)
 		action(array[i]);
 	if (array == NULL)
 		return;
