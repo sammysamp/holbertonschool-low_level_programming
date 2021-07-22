@@ -12,18 +12,22 @@
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	char *mcmp;
-	unsigned int i;
-
+	int i;
+	
+	if (size <= 0)
+		return (-1);
 	mcmp = malloc(sizeof(cmp));
 	if (mcmp == NULL)
-		return;
+		return (-1);
 	i = 0;
-	while (array[i] != cmp(i))
+	while (!cmp(array[i]))
 	{
-		i++
+		i++;
+		if (i > size)
+			return (-1);
 	}
 	if (array == NULL)
-		return;
-	free(mname);
+		return (-1);
+	free(mcmp);
 	return (i);
 }
