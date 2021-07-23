@@ -11,12 +11,11 @@
 void print_name(char *name, void (*f)(char *))
 {
 	char *mname;
-
+	if (f == NULL)
+		return;
 	mname = malloc(sizeof(f));
 	if (mname == NULL)
 		return;
 	f(name);
-	if (f == NULL)
-		return;
 	free(mname);
 }
