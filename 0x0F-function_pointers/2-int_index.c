@@ -13,7 +13,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	char *mcmp;
 	int i;
-	
+
+	if (array == NULL || cmp == NULL)
+		return (-1);
 	if (size <= 0)
 		return (-1);
 	mcmp = malloc(sizeof(cmp));
@@ -26,8 +28,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 		if (i > size)
 			return (-1);
 	}
-	if (array == NULL)
-		return (-1);
 	free(mcmp);
 	return (i);
 }
