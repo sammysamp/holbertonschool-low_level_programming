@@ -16,6 +16,8 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	if (array == NULL)
 		return;
+	if (action == NULL)
+		return;
 	mname = malloc(sizeof(action));
 	if (mname == NULL)
 		return;
