@@ -11,6 +11,7 @@
 void print_name(char *name, void (*f)(char *))
 {
 	char *mname;
+
 	if (f == NULL)
 		return;
 	mname = malloc(sizeof(f));
