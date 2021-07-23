@@ -14,12 +14,12 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	char *mname;
 	unsigned int i;
 
+	if (array == NULL)
+		return;
 	mname = malloc(sizeof(action));
 	if (mname == NULL)
 		return;
 	for (i = 0; i < size; i++)
 		action(array[i]);
-	if (array == NULL)
-		return;
 	free(mname);
 }
