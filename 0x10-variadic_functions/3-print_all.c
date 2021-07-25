@@ -24,6 +24,11 @@ void fnFloat(va_list al)
 	printf("%f", va_arg(al, double));
 }
 
+void fnNULL()
+{
+	printf("(nil)");
+}
+
 void print_all(const char * const format, ...)
 {
 	fmt fmts[] = {
@@ -31,7 +36,7 @@ void print_all(const char * const format, ...)
 		{'i', fnInt},
 		{'f', fnFloat},
 		{'s', fnStr},
-		{'\0', NULL}
+		{'\0', fnNULL}
 	};
 
 	int iformat = 0;
