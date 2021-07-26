@@ -26,10 +26,12 @@ void fnStr(va_list al)
 	char *mychar;
 
 	mychar = va_arg(al, char*);
-	if (mychar != NULL)
-		printf("%s", mychar);
-	else
+	if (mychar == NULL)
+	{
 		printf("(nil)");
+		return;
+	}
+	printf("%s", mychar);
 }
 /**
  * fnFloat - print Float
