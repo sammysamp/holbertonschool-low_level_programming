@@ -28,6 +28,8 @@ void fnStr(va_list al)
 	mychar = va_arg(al, char*);
 	if (mychar != NULL)
 		printf("%s", mychar);
+	else
+		printf("(nil)");
 }
 /**
  * fnFloat - print Float
