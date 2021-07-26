@@ -1,42 +1,56 @@
 #include <stdio.h>
 #include <stdarg.h>
-
-typedef struct fmt
-{
-	char in;
-	void (*fn)(va_list);
-} fmt;
-
+#include "variadic_functions.h"
+/**
+ * fnChar - print char
+ * @al: argument list
+ */
 void fnChar(va_list al)
 {
 	printf("%c", va_arg(al, int));
 }
+/**
+ * fnInt - print Int
+ * @al: argument list
+ */
 void fnInt(va_list al)
 {
 	printf("%d", va_arg(al, int));
 }
+/**
+ * fnStr - print Str
+ * @al: argument list
+ */
 void fnStr(va_list al)
 {
-	printf("%s", va_arg(al, char*));
+	char mychar;
+
+	mychar = va_arg(al, char*);
+	if (mychar != NULL)
+		printf("%s", mychar);
+	else
+		printf("%s", "(nil)");
 }
+/**
+ * fnFloat - print Float
+ * @al: argumento list
+ */
 void fnFloat(va_list al)
 {
 	printf("%f", va_arg(al, double));
 }
 
-void fnNULL()
-{
-	printf("(nil)");
-}
-
+/**
+ * print_all - print everything
+ * @format: string with chars to evaluate
+ */
 void print_all(const char * const format, ...)
 {
 	fmt fmts[] = {
 		{'c', fnChar},
 		{'i', fnInt},
 		{'f', fnFloat},
-		{'s', fnStr},
-		{'\0', fnNULL}
+		{'s', fnStr}
 	};
 
 	int iformat = 0;
