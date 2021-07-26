@@ -24,8 +24,10 @@ void fnInt(va_list al)
 void fnStr(va_list al)
 {
 	char *mychar;
+
 	mychar = va_arg(al, char*);
-	printf("%s", mychar);
+	if (mychar != NULL)
+		printf("%s", mychar);
 }
 /**
  * fnFloat - print Float
