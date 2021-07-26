@@ -23,13 +23,7 @@ void fnInt(va_list al)
  */
 void fnStr(va_list al)
 {
-	char *mychar;
-
-	mychar = va_arg(al, char*);
-	if (mychar != NULL)
-		printf("%s", mychar);
-	else
-		printf("%s", "(nil)");
+	printf("%s", va_arg(al, char*));
 }
 /**
  * fnFloat - print Float
