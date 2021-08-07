@@ -5,7 +5,7 @@
 /**
  * sum_listint - get the sume of n values
  * @head: origin pointer linked list
- * 
+ *
  * Return: sum
  */
 int sum_listint(listint_t *head)
@@ -20,6 +20,6 @@ int sum_listint(listint_t *head)
 	{
 		sum += current->n;
 		current = current->next;
-	}	
+	}
 	return (sum);
 }
