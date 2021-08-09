@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include "main.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+/**
+ * read_textfile - read file
+ * @filename: file name
+ * @letter: number of chars to read
+ * Return: number of chars returned
+ */
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+	int i,fd;
+	char buf[1200];
+	ssize_t rd;
+
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		exit(1);
+	rd = read(fd, buf, letters);
+	close(fd);
+	for (i = 0; i < rd; i++)
+		putchar(buf[i]);	
+	return (rd);
+}
