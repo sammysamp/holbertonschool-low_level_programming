@@ -8,7 +8,7 @@
 /**
  * read_textfile - read file
  * @filename: file name
- * @letter: number of chars to read
+ * @letters: number of chars to read
  * Return: number of chars returned
  */
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -23,6 +23,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 	rd = read(fd, buf, letters);
+	if (rd == -1)
+		return (0);
 	close(fd);
 	for (i = 0; i < rd; i++)
 		_putchar(buf[i]);
