@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * set_bit - set 1 to a diven an index
+ * clear_bit - set 0 to a diven an index
  * @n: n
  * @index: index
  * Return: value of bit of given index
