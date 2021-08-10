@@ -14,9 +14,12 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int i, fd;
-	char buf[1200];
+	char *buf;
 	ssize_t rd;
 
+	buf = malloc(sizeof(char) * letters);
+	if (buf == NULL)
+		return (0);
 	if (filename == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
@@ -25,8 +28,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	rd = read(fd, buf, letters);
 	if (rd == -1)
 		return (0);
-	close(fd);
 	for (i = 0; i < rd; i++)
 		_putchar(buf[i]);
+	close(fd);
+	free(buf);
 	return (rd);
 }
