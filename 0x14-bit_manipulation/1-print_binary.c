@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <limits.h>
 #include "main.h"
 /**
  * print_binary - convert unsigned int to bin
@@ -8,7 +9,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int mask = 4611686018427387904;
+	unsigned long int mask = ULONG_MAX;
 	int flag = 0;
 
 	if (n == 0)
