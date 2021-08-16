@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "3-calc.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * main - print the name of the program
  * @argc: int length of array argv
@@ -22,6 +23,16 @@ int main(int argc, char **argv)
 	{
 		printf("Error\n");
 		return (99);
+	}
+	if (strlen(argv[2]) != 1)
+	{
+		printf("Error\n");
+		return (99);
+	}
+	if (argv[3] == 0)
+	{
+		printf("Error\n");
+		return (100);
 	}
 	result = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", result);
