@@ -18,20 +18,23 @@ int create_file(const char *filename, char *text_content)
 	char *buf;
 	ssize_t wd;
 
-	if (text_content == NULL)
-		text_content = "A";
 	if (filename == NULL)
 		return (-1);
-	buf = malloc(sizeof(char) * strlen(text_content));
-	if (buf == NULL)
-		return (0);
-	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
-	if (fd == -1)
-		return (-1);
-	wd = write(fd, text_content, strlen(text_content));
-	if (wd == -1)
-		return (-1);
+	if (text_content != NULL)
+	{
+		buf = malloc(sizeof(char) * strlen(text_content));
+		if (buf == NULL)
+			return (0);
+		fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+		if (fd == -1)
+			return (-1);
+		wd = write(fd, text_content, strlen(text_content));
+		if (wd == -1)
+			return (-1);
+		free(buf);
+	}
+	else
+		fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 	close(fd);
-	free(buf);
 	return (1);
 }
