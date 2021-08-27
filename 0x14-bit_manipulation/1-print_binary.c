@@ -9,23 +9,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = ULONG_MAX;
-	int flag = 0;
-
-	if (n == 0)
-		printf("0");
-	while (mask > 0)
-	{
-		if ((n & mask) == 0)
-		{
-			if (flag == 1)
-				printf("0");
-		}
-		else
-		{
-			flag = 1;
-			printf("1");
-		}
-		mask = mask >> 1;
-	}
+	if (n > 1)
+		print_binary(n >> 1);
+	_putchar((n & 1) + '0');
 }
