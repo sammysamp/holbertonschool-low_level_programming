@@ -1,0 +1,27 @@
+# Makefile that creates the executable file "school" with the
+# variables CC for gcc, SRC fot the .c files, OBJ for the .o files,
+# NAME for the name of the executable, RM for the program to delete
+# files and CFLAGS for the compiler flags
+
+CC=gcc
+SRC=main.c school.c
+OBJ=$(SRC:%.c=%.o)
+NAME=school
+RM=rm -f
+CFLAGS=-Wall -Werror -Wextra -pedantic
+
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean:
+	$(RM) *~ $(NAME)
+	$(RM) $(OBJ)
+
+re:
+	oclean all
